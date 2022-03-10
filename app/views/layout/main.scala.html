@@ -39,9 +39,9 @@
                             <ul class="nav">
                                 <li><a href="@routes.IndexController.index">@Messages("menu.dashboard")</a></li>
                                 <li><a href="@routes.BookController.list()">@Messages("menu.browse")</a></li>
-                                @if(request.session.get("authenticated").isDefined) {
+
                                     <li><a href="@routes.BookController.addManualForm">@Messages("menu.books.manualAdd")</a></li>
-                                }
+
                                 <form action="@routes.BookController.list()" method = "get" class="navbar-search pull-right">
                                     <input type="text" placeholder="@Messages("menu.search.placeholder")" name="q" class="input-small search-query"
                                         value="@request.queryString.get("q").map(_.headOption).getOrElse("")">

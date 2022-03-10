@@ -17,12 +17,9 @@ trait ControllerSupport {
     protected def invokeBlock[A](request: Request[A], block: (Request[A]) => Future[SimpleResult]): Future[SimpleResult] = {
       import play.api.Play.current
       implicit val dispatcher = Akka.system.dispatcher
-      if (request.session.get("authenticated").isDefined)
+
         block(request)
-      else
-        Future {
-          Redirect(routes.IndexController.index).flashing("level" -> "error", "msg" -> "You are not authorized, please log in")
-        }
+
     }
   }
 }

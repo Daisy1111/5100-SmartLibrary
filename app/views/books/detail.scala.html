@@ -10,13 +10,13 @@
             }
         </div>
 
-        @session.get("authenticated").map {_ =>
+
             <div class="book-menu clearfix">
                 <a href="@routes.BookController.edit(book.id.get)">@Messages("edit")</a>
                 <a class="delete-book" href="#" data-delete-url="@routes.BookController.delete(book.id.get)"
                         data-redirect-url="@routes.BookController.list()" data-confirmation-message="@Messages("book.confirmation.delete")">@Messages("delete")</a>
             </div>
-        }
+
 
         <div class="dates">
             <span>@Messages("detail.date.createdAt"):</span><br/>

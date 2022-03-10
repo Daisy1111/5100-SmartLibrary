@@ -4,10 +4,13 @@ import play.api.mvc.RequestHeader
 import play.api.{Application, GlobalSettings}
 import scala.concurrent.Future
 
+
+
 object Global extends GlobalSettings with ControllerSupport{
   override def onStart(app: Application) {
     super.onStart(app)
     play.Logger.info("Starting the application.")
+
   }
 
   override def onStop(app: Application) {

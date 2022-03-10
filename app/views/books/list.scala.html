@@ -1,7 +1,7 @@
 @(books: List[Book], allAuthors: List[Author], allTags: List[Tag])(implicit flash: Flash, session: Session, request: Request[_])
 
 
-@layout.main("Books list")(List("browse-books.js")) {
+@layout.main("Search")(List("browse-books.js")) {
 <div class="browse-books">
 
     <div class="row-fluid">

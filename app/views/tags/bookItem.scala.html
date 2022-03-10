@@ -8,7 +8,7 @@
 
         <div class="actions">
             <a href="@routes.BookController.detail(book.id.get)" class="display-tooltip" title="@Messages("detail")"><i class="icon-eye-open"></i></a>
-            @session.get("authenticated").map {_ =>
+
                 <a href="@routes.BookController.edit(book.id.get)" class="display-tooltip" title="@Messages("edit")"><i class="icon-edit"></i></a>
                 <a href="#" class="delete-book display-tooltip" title="@Messages("delete")"
                             data-delete-url="@routes.BookController.delete(book.id.get)"
@@ -16,7 +16,7 @@
                             data-confirmation-message="@Messages("book.confirmation.delete")">
                     <i class="icon-remove"></i>
                 </a>
-            }
+
         </div>
 
     </div>
