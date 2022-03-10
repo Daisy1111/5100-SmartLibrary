@@ -11,3 +11,4 @@
 4. Run command: cd /path/to/5100-SmartLibrary
 5. Run command: play run
 6. Access http://localhost:9000/ from your web browser
+7. Github repository: https://github.com/ESoapW/5100-SmartLibrary
