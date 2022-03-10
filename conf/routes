@@ -1,0 +1,39 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                               controllers.IndexController.index
+
+# Auth
+POST    /login						                    controllers.LoginController.login
+GET		/logout						                    controllers.LogoutController.logout
+
+
+# Book manipulation
+GET		/books           			                    controllers.BookController.list(q: String ?= "")
+GET		/books/fragment 			                    controllers.BookController.listFragment(q: String ?= "", authorId: Option[Long] ?= None, tagId: Option[Long] ?= None)
+
+GET		/books/add                                      controllers.BookController.addManualForm
+POST	/books/add					                    controllers.BookController.save
+
+GET		/books/:identifier/edit		                    controllers.BookController.edit(identifier: Long)
+GET 	/books/:identifier			                    controllers.BookController.detail(identifier: Long)
+DELETE	/books/:identifier			                    controllers.BookController.delete(identifier: Long)
+
+# Authors list
+GET     /authors/:identifier/popover-content            controllers.AuthorController.authorPopoverContent(identifier: Long)
+
+# Tags list
+GET     /tags/:identifier/popover-content               controllers.TagController.tagPopoverContent(identifier: Long)
+
+
+# Utility routes
+GET		/showconfig					                    controllers.UtilController.listConfiguration
+POST    /cleanup                                        controllers.UtilController.cleanup
+
+
+GET     /misc/flag/:code                                controllers.FlagController.getFlag(code)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                                   controllers.Assets.at(path="/public", file)

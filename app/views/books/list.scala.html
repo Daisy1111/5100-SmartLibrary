@@ -1,0 +1,33 @@
+@(books: List[Book], allAuthors: List[Author], allTags: List[Tag])(implicit flash: Flash, session: Session, request: Request[_])
+
+
+@layout.main("Books list")(List("browse-books.js")) {
+<div class="browse-books">
+
+    <div class="row-fluid">
+
+        <div class="span2">
+            <ul class="author-list">
+                @for(author <- allAuthors) {
+                    <li><a href="#" data-author-id="@author.id">@author.name</a></li>
+                }
+            </ul>
+        </div>
+
+        <div class="span10">
+            <div class="tag-list">
+                <div class="span12">
+                    @for(tag <- allTags) {
+                        @tags.tag(tag, false)
+                    }
+                </div>
+            </div>
+
+            <div class="book-list" data-update-url="@routes.BookController.listFragment()">
+                @tags.bookList(books)
+            </div>
+        </div>
+
+    </div>
+</div>
+}

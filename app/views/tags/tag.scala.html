@@ -1,0 +1,5 @@
+@(tag: Tag, showPopover: Boolean)
+
+<a class="tag-link @if(showPopover) { popover-link }"
+   data-name="@tag.name"
+   data-url="@routes.TagController.tagPopoverContent(tag.id.get)"><span class="label label-info tag" data-tag-id="@tag.id">@tag.name</span></a>

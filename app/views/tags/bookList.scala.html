@@ -1,0 +1,10 @@
+@(books: List[Book])(implicit request: Request[_], session: Session)
+
+
+@if(books.isEmpty) {
+    <h3>@Messages("no.books.found")</h3>
+} else {
+    @for(book <- books) {
+        @tags.bookItem(book)
+    }
+}

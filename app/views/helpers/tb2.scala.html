@@ -1,0 +1,26 @@
+@(elements: helper.FieldElements)
+
+<div class="control-group @if(elements.hasErrors) {error}">
+    <label class="control-label" for="@elements.id">@elements.label</label>
+
+
+
+    <div class="controls">
+        @elements.input
+        <span class="help-inline">
+            @if(elements.args.get('_required)) {
+                <i class="icon-exclamation-sign display-tooltip" title="@Messages("required")"></i>
+            }
+
+            @elements.args.get('_tooltip).map{desc =>
+                <i class="icon-info-sign display-tooltip" title="@desc"></i>
+            }
+            @if(elements.hasErrors) {
+                <span class="help-inline">
+                    @elements.errors.mkString(", ")
+                </span>
+            }
+        </span>
+    </div>
+
+</div>

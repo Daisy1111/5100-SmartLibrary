@@ -1,0 +1,8 @@
+@()(implicit request: RequestHeader)
+
+@layout.main(Messages("page.notFound.title"))(List("redirect-home.js")) {
+
+	<h3>@Messages("page.notFound.title")</h3>
+	<p>@Messages("page.notFound.message")</p>
+
+}

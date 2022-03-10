@@ -1,0 +1,10 @@
+@(books: List[Book])
+
+<div class="tag-popover-content">
+    @Messages("popover.tag.text", books.size):
+    <ul>
+        @for(book <- books) {
+            <li><a href="@routes.BookController.detail(book.id.get)">@book.title</a></li>
+        }
+    </ul>
+</div>

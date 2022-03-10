@@ -1,0 +1,24 @@
+@(bookForm: Form[Book])(implicit session: Session, flash: Flash)
+
+@import helpers.tb2
+@import helper._
+@implicitField = @{ FieldConstructor(tb2.f) }
+
+@helper.form(action = routes.BookController.save, 'class -> "form-horizontal add-book") {
+    @inputText(bookForm("title"), '_required -> "true")
+    @inputText(bookForm("authors"), '_required -> "true", '_tooltip -> Messages("form.addBook.authors.tooltip"))
+    @inputText(bookForm("publisher"))
+    @inputText(bookForm("pageCount"), 'class -> "input-small")
+    @inputText(bookForm("datePublished"), 'class -> "input-small")
+    @textarea(bookForm("description"))
+    @textarea(bookForm("contact_information"))
+    @inputText(bookForm("tags"), '_tooltip -> Messages("form.addBook.tags.tooltip"))
+
+
+    <div class="control-group">
+        <div class="controls">
+            <input type="hidden" name="id" value="@bookForm("id").value">
+            <button type="submit" class="btn">@Messages("submit")</button>
+        </div>
+    </div>
+}

@@ -1,0 +1,41 @@
+@(book: Book)(implicit request: Request[_], session: Session)
+
+<div class="book-item clearfix">
+    <div>
+        <div class="title">
+            <a href="@routes.BookController.detail(book.id.get)">@book.title</a>
+        </div>
+
+        <div class="actions">
+            <a href="@routes.BookController.detail(book.id.get)" class="display-tooltip" title="@Messages("detail")"><i class="icon-eye-open"></i></a>
+            @session.get("authenticated").map {_ =>
+                <a href="@routes.BookController.edit(book.id.get)" class="display-tooltip" title="@Messages("edit")"><i class="icon-edit"></i></a>
+                <a href="#" class="delete-book display-tooltip" title="@Messages("delete")"
+                            data-delete-url="@routes.BookController.delete(book.id.get)"
+                            data-redirect-url="@routes.BookController.list()"
+                            data-confirmation-message="@Messages("book.confirmation.delete")">
+                    <i class="icon-remove"></i>
+                </a>
+            }
+        </div>
+
+    </div>
+
+    <div>
+        <div class="authors">
+            @Html(book.authors.map(author => tags.authorPopoverLink(author)).mkString("&nbsp;"))
+        </div>
+
+        <div>
+
+            <div class="tags">
+                @for(tag <- book.tags) {
+                    @tags.tag(tag, true)
+                }
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

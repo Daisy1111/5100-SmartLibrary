@@ -1,0 +1,71 @@
+## General
+application.title=Smart library
+
+
+log.in=Sign in
+log.out=Log out
+submit=Submit
+detail=Detail
+edit=Edit
+delete=Delete
+password=Password
+required=Required field
+book.confirmation.delete=Are you sure you want to delete this book?
+
+
+
+gb.loading=Loading...
+gb.loading.notFound=Book not found
+gb.loading.found=Book found
+gb.loading.submit=Get
+
+no.books.found=There are no books found
+
+page.notFound.title=Page not found (404)
+page.notFound.message=The page you''ve requested has not been found, you are going to be redirected to the home page...
+
+
+detail.date.createdAt=Created at
+detail.date.modifiedAt=Last modified at
+
+
+## Popovers
+popover.author.text=In your library, there are in total {0} book(s) by this author
+popover.tag.text=In your library, there are in total {0} book(s) with this tag
+
+# Index page
+index.header=Welcome to smart library!
+index.paragraph1=Smart library is a library database designed to be used in the neighborhood, you can add your book's information here and search for available books.
+index.paragraph2=This is a IT5100A project. Member: Guo Dan, Wei Yixin, Song Kenan
+index.paragraph3=
+index.maintenance.title=
+index.books.title=Current books:
+index.book.empty=
+
+index.cleanup.title=
+index.cleanup.question=
+index.cleanup.message=
+
+
+# Menu
+menu.dashboard=Home
+menu.browse=Search
+menu.books=Add a book
+menu.books.manualAdd=Add book
+menu.books.tags=Tag management
+menu.books.authors=Author management
+menu.search.placeholder=Search library
+
+## Book properties
+title=Title
+authors=Authors
+publisher=Publisher
+pageCount=Pages
+datePublished=Published
+description=Description
+contact_information=contact_information
+tags=Tags
+
+## Add book form
+form.addBook.authors.tooltip=Enter a comma-separated list of authors
+form.addBook.tags.tooltip=Enter a comma-separated list of tags

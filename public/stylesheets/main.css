@@ -1,0 +1,177 @@
+/* Fundamental */
+body {
+    background-color: #faebd7;
+}
+
+
+.navbar{
+    background-color: #eed3d7;
+    color: white;
+}
+
+.navbar-inner{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background-color: #eed3d7;
+    color: white;
+}
+
+.nav{
+    display: contents;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+    font-size: large;
+}
+
+.nav pull-right{
+    background-color: #eed3d7;
+    color: white;
+}
+
+hr {
+    border:none;
+    border-top:1px #CCCCCC solid;
+    height: 1px;
+}
+
+
+
+.content-row {
+    min-height: 450px;
+}
+
+
+a.author-popover-link {
+    text-decoration: none; border-bottom:1px dotted;
+}
+
+div.tag-list a.tag-link {
+    cursor: pointer;
+}
+
+a.popover-link {
+    cursor: help;
+}
+
+div.author-popover-content {
+    font-size: 8pt;
+}
+
+div.tag-popover-content {
+    font-size: 8pt;
+}
+
+span.search-highlight {
+    color: red;
+}
+
+.code {
+	font-family: monospace;
+	border: gray 1px solid;
+	background-color: #FAF2F5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	font-size: 9pt;
+}
+
+/* index page */
+.index h4 {
+    margin-top: 35px;
+}
+
+.index .books {
+    margin-top: 25px;
+}
+
+.index .books .book {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 35px;
+    width: 128px;
+    max-height: 220px;
+    height: 220px;
+}
+
+.index .books .book img {
+    width: 96%;
+    height: 168px;
+    border: 1px solid black;
+    padding: 1px;
+}
+
+.index .books .book .title {
+    text-align: center;
+}
+
+/* Add book form */
+
+form.add-book { /* main add book form */
+    margin: 5px auto 15px auto;
+    float: left;
+}
+
+/* Form detail */
+
+.book-detail .a-label {
+    font-weight: bold;
+}
+
+.book-detail .book-menu {
+    text-align: center;
+}
+
+.book-detail .tags {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.book-detail .flag img {
+    margin: 0px auto 0px auto;
+    display: block;
+    width: 32px;
+}
+
+.book-detail .book-menu a {
+    display: block;
+}
+
+.book-detail .dates {
+    margin-top: 16px;
+    text-align: center;
+}
+
+
+
+/* Book item on list of all books or search result */
+
+.browse-books .author-list .selected {
+    font-weight: bold;
+}
+
+.browse-books .tag-list {
+    margin-bottom: 45px;
+}
+
+.browse-books .book-list .book-item {
+    margin: 10px 5px 10px 5px;
+    padding: 2px;
+    padding-left: 4px;
+    border: solid #E6E6E6;
+    border-width: 0 0 0 8px;
+}
+
+.browse-books .book-list .book-item .title {
+    font-size: 13pt;
+    font-weight: bold;
+    float: left;
+    margin-right: 10px;
+}
+
+.browse-books .book-list .book-item .authors {
+    font-size: 8pt;
+}

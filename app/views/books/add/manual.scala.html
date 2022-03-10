@@ -1,0 +1,7 @@
+@(bookForm: Form[Book])(implicit session: Session, flash: Flash, request: Request[_])
+
+@layout.main("Add new book")() {
+    <div class="add-book-form-container">
+        @tags.addForm(bookForm)
+    </div>
+}

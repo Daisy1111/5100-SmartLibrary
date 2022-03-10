@@ -1,0 +1,2 @@
+@(url: String, clazz: String = "")
+<image src="@if(url.isEmpty) { @routes.Assets.at("images/image-not-available.png") } else { @url }" class="@clazz" />
