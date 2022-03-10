@@ -22,7 +22,7 @@ gb.loading.submit=Get
 no.books.found=There are no books found
 
 page.notFound.title=Page not found (404)
-page.notFound.message=The page you''ve requested has not been found, you are going to be redirected to the home page...
+page.notFound.message=The page you''ve requested has not been found, you are going to be redirected to the smart page...
 
 
 detail.date.createdAt=Created at

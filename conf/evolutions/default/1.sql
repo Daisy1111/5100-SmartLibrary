@@ -1,9 +1,9 @@
 # --- !Ups
 
-create sequence homelibrary_sequence;
+create sequence smartlibrary_sequence;
 
 create table book (
-	book_id bigint not null default nextval('homelibrary_sequence') primary key,
+	book_id bigint not null default nextval('smartlibrary_sequence') primary key,
 	title varchar(260) not null,
 	description text,
 	publisher varchar(200),
@@ -15,12 +15,12 @@ create table book (
 );
 
 create table author (
-	author_id bigint not null default nextval('homelibrary_sequence') primary key,
+	author_id bigint not null default nextval('smartlibrary_sequence') primary key,
 	name varchar(100) not null unique
 );
 
 create table tag (
-    tag_id bigint not null default nextval('homelibrary_sequence') primary key,
+    tag_id bigint not null default nextval('smartlibrary_sequence') primary key,
     name varchar(30) not null unique
 );
 
@@ -41,4 +41,4 @@ drop table book_author;
 drop table tag;
 drop table author;
 drop table book;
-drop sequence homelibrary_sequence;
+drop sequence smartlibrary_sequence;

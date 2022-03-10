@@ -2,13 +2,8 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
+# smart page
 GET     /                                               controllers.IndexController.index
-
-# Auth
-POST    /login						                    controllers.LoginController.login
-GET		/logout						                    controllers.LogoutController.logout
-
 
 # Book manipulation
 GET		/books           			                    controllers.BookController.list(q: String ?= "")
