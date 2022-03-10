@@ -4,7 +4,7 @@
 2. Configuration about the environment variable.
     - vim ~/.bash_profile
     - add two lines:  
-      export PLAY_HOME=”your path to play2.2.1”  
+      export PLAY_HOME=”/path/to/play2.2.1”  
       export PATH=$PATH:$PLAY_HOME
     - source ~/.bash_profile
 3. Open intellij with the source code, connect to the H2 database
